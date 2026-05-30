@@ -11,7 +11,7 @@ with open(Path(__file__).parent / "assets" / "good-morning-in-140-languages.csv"
         greetings.append((row["language"], row["good-morning"]))
 
 language, greeting = greetings[date.today().timetuple().tm_yday % len(greetings)]
-message = f"{greeting} in {language}"
+message = f"\"{greeting}\" in {language}"
 title = os.getenv("SCHEDULE_TITLE", "Good morning!")
 webhook_url = os.environ["TEAMS_WEBHOOK_URL"]
 
