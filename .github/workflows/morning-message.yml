@@ -1,12 +1,7 @@
 name: Morning Teams Message
 
 on:
-  schedule:
-    # 9 AM Lisbon time (UTC+1 winter / UTC+2 summer)
-    # Adjust hour: use 8 for winter (UTC+1), 7 for summer (UTC+2)
-    # '0 8 * * 1-5'
-    - cron: '5 * * * *'
-  workflow_dispatch: # allow manual trigger from the GitHub Actions UI
+  workflow_dispatch: # triggered by cron-job.org via GitHub API
 
 jobs:
   send:
