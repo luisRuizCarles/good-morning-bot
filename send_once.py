@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 
 greetings: list[tuple[str, str]] = []
-with open(Path(__file__).parent / "assets" / "good-morning-in-140-languages.csv", encoding="utf-8") as f:
+with open(Path(__file__).parent / "assets" / "good-morning-in-140-languages.csv", encoding="utf-8-sig") as f:
     for row in csv.DictReader(f, delimiter=";"):
         greetings.append((row["language"], row["good-morning"]))
 
